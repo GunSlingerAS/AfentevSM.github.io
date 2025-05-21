@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Личный кабинет - Стримы</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+      @font-face {
+        font-family: "Actay Wide";
+        src: url("fonts/ActayWide-Bold.woff2") format("woff2"),
+          url("fonts/ActayWide-Bold.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+      }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #fafaff;
+  color: #333;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*Стили текста*/
+.button-style--small {
+  font-family: "Montserrat";
+    sans-serif;
+  font-size: 18px !important;
+  font-weight: 300; /* Regular начертание */
+  font-style: normal;
+  line-height: 1.2;
+}
+
+.button-style--big {
+  font-size: 20px;
+}
+
+h1 {
+  font-family: "Montserrat";
+    sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-family: "Montserrat";
+    sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+h3{
+  font-family: "Montserrat";
+  sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  line-height: 1.3;
+}
+
+h4{
+  font-family: "Montserrat";
+  sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.standart{
+  font-family: "Montserrat";
+font-size: 18px !important;
+font-weight: 300;
+font-style: normal;
+line-height: 1.2;
+}
+
+.nav-link {
+  color: white !important;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+header {
+  height: 75px;
+  width: 100%;
+  background-color: #0d0a0b;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.padding-header{
+  width: 1280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 120px;
+  padding-right: 120px;
+  height: 100%;
+}
+
+.logo-container {
+  width: 60px;
+  height: 60px;
+}
+
+.logo-icon {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 561px;
+  height: 32px;
+}
+
+.text-block-1 {
+  height: auto;
+  width: auto;
+  color: #fafaff;
+}
+
+.small-button {
+  min-height: 41px;
+  min-width: 155px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #264c12;
+  color: #fafaff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.small-button:hover {
+  background-color: #152a0a;
+}
+
+.small-button:active {
+  border: 2px solid #264c12;
+  padding-left: 18px;
+  padding-right: 18px;
+  color: #264c12;
+  background-color: transparent;
+  transform: scale(0.98);
+}
+
+.tiny-button {
+  margin-top: 10px;
+  width:107px;
+  height:21px;
+  background-color: #264c12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fafaff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tiny-button:hover {
+  background-color: #152a0a;
+}
+
+.tiny-button:active {
+  border: 2px solid #264c12;
+  color: #264c12;
+  background-color: transparent;
+  transform: scale(0.98);
+}
+
+.small-icon-container{
+  height: 41px;
+  width: 41px;
+  margin-left: 114px;
+  border:none;
+  background-color: transparent;
+}
+
+.small-icon{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  object-fit:cover;
+  object-position: center;
+}
+
+.link-button {
+  border: none;
+  background-color: transparent;
+  color:#fafaff;
+}
+
+.link-button-2{
+  text-align: end;
+  border: none;
+  background-color: transparent;
+  color:#fafaff;
+}
+
+/*тело сайта*/
+.padding {
+  width: 1060px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+}
+
+.profile-container{
+  width: 100%;
+  height: 371px;
+  border-radius: 20px;
+  display:flex;
+  flex-direction: column;
+  background-color: aqua;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  color:#0d0a0b;
+}
+
+.profile-header-container{
+  width:100%;
+  height: 0px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.profile-header{
+  width: 1060px;
+  height: 300px;
+  border-radius: 20px;
+  position:absolute;
+  object-fit:cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.profile-icon-container{
+  height: 0px;
+  width: 0px;
+  position: relative;
+}
+
+.profile-icon {
+  height: 180px;
+  width: 180px;
+  top: 172px;
+  left: 24px;
+  border: 3px solid #8BBA49;
+  border-radius: 100%;
+  position: absolute;
+  object-fit:cover;
+  object-position: center;
+  z-index: 3;
+}
+
+.profile-info-container{
+  margin-top: auto;
+  height:111px;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding: 20px;
+  padding-left: 218px;
+  align-self: end;
+  justify-self: end;
+  z-index: 2;
+  background-color: #8BBA49;
+}
+
+.username{
+  min-height:47px;
+  width:auto;
+}
+
+.name{
+  height: 18px;
+  margin-bottom: 15px;;
+}
+.info-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 90px;
+}
+
+.pages{
+  width:190px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 61px;
+  color:#0d0a0b;
+}
+
+.streams{
+  min-height: 329px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color:#0d0a0b;
+}
+
+.page-block{
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.page-btn{
+  font-family: "Montserrat";
+  font-size: 18px !important;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.2;
+  color: #0d0a0b;
+  border: none;
+  background-color: #fafaff;
+}
+
+.page-btn:hover{
+  color: #706d6e;
+}
+
+.border-line{
+  width:100%;
+  height:2px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  background-color: #0d0a0b;
+}
+
+.page-icon-container{
+  height:17px;
+  width:17px;
+  margin-right: 5px;
+}
+
+.tiny-text{
+  font-family: "Montserrat";
+  font-size: 13px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+/* Подвал сайта */
+footer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0d0a0b;
+  margin-top: auto;
+}
+
+.footer-container {
+  width: 1280px;
+  color: #fafaff;
+  padding: 36px 116px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer-content {
+  width:80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  min-width: 100px;
+}
+
+.title-h4{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-section ul {
+  margin-top:15px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-section li {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  justify-content:end;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBtn{
+  border: none;
+  background-color: transparent;
+}
+
+.social-image-1{
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
+  object-position: center;
+}
+
+.social-image-2{
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
+  object-position: center;
+}
+
+.social-image-3{
+  width: 75%;
+  height: 75%;
+  object-fit:fill;
+  object-position: center;
+}
+
+.social-image-4{
+  width: 90%;
+  height: 90%;
+  object-fit:fill;
+  object-position: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #8BBA49;
+}
+
+.copyright {
+  width: 100%;
+  background-color: #0d0a0b;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #fafaff;
+  color: #fafaff;
+  font-size: 14px;
+  margin-top: 0;
+}
+    </style>
+  </head>
+  <body>
+    <!-- Шапка сайта -->
+    <header>
+      <div class="padding-header">
+        <div class="logo-container">
+          <button class="link-button" id="logoLink">
+            <img
+              src="https://i.postimg.cc/qMpJBJCZ/icons8-gaming-hand-96.png"
+              alt="Логотип Gaming Hand"
+              class="logo-icon"
+            />
+          </button>
+        </div>
+        <div class="header-bar">
+          <div class="text-block-1">
+            <button class="link-button" id="headerCoursesBtn">
+              <p class="button-style--small">Все курсы</p>
+            </button>
+          </div>
+          <div class="text-block-1">
+            <button class="link-button" id="studentsLink">
+              <p class="button-style--small">Работы студентов</p>
+            </button>
+          </div>
+          <div class="text-block-1">
+            <button class="link-button" id="structureLink">
+              <p class="button-style--small">Структура обучения</p>
+            </button>
+          </div>
+        </div>
+        <button class="small-icon-container" id="iconLink">
+          <img
+            src="https://i.postimg.cc/PrSF0zmq/image.jpg"
+            alt="Иконка"
+            class="small-icon"
+          />
+        </button>
+      </div>
+    </header>
+
+    <div class="padding">
+      <div class="profile-container">
+        <div class="profile-header-container">
+          <img
+            src="https://i.postimg.cc/kXsyBJ4Y/image.jpg"
+            alt="Превью"
+            class="profile-header"
+          />
+        </div>
+        <div class="profile-icon-container">
+          <img
+            src="https://i.postimg.cc/PrSF0zmq/image.jpg"
+            alt="Иконка"
+            class="profile-icon"
+          />
+        </div>
+        <div class="profile-info-container">
+          <div class="username">
+            <div class="name">
+              <h2>Сергей Афентьев</h2>
+            </div>
+            <p class="standart">начинающий weapon artist</p>
+          </div>
+          <button class="small-button" id="editBtn">
+            <p class="button-style--small">Редактировать профиль</p>
+          </button>
+        </div>
+      </div>
+      <div class="info-container">
+        <div class="pages">
+          <div class="page-block">
+            <div class="page-icon-container">
+              <img
+                src="https://img.icons8.com/?size=100&id=114100&format=png&color=000000"
+                alt="Иконка"
+                class="small-icon"
+              />
+            </div>
+            <button class="page-btn" id="my-cources-btn">Мои курсы</button>
+          </div>
+          <div class="border-line"></div>
+          <div class="page-block">
+            <div class="page-icon-container">
+              <img
+                src="https://img.icons8.com/?size=100&id=114100&format=png&color=000000"
+                alt="Иконка"
+                class="small-icon"
+              />
+            </div>
+            <button class="page-btn" id="streams-btn">Стримы</button>
+          </div>
+          <div class="border-line"></div>
+          <div class="page-block">
+            <div class="page-icon-container">
+              <img
+                src="https://img.icons8.com/?size=100&id=114100&format=png&color=000000"
+                alt="Иконка"
+                class="small-icon"
+              />
+            </div>
+            <button class="page-btn" id="all-cources-btn">Все курсы</button>
+          </div>
+        </div>
+        <div class="streams">
+          <h2>СТРИМЫ</h2>
+          <p class="standart" p>
+            На данный момент у тебя нет доступных стримов.<br />Для начала
+            выбери курс в разделе «Все курсы». Если ты уже приобрел курс,<br />то
+            скоро тут появятся стримы.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="title-h4">
+              <h4>Направления</h4>
+            </div>
+            <ul>
+              <li>
+                <button class="link-button-2" id="propsLink">
+                  <a>пропсы</a>
+                </button>
+              </li>
+              <li>
+                <button class="link-button-2" id="weaponLink">
+                  <a>оружие</a>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <div class="title-h4">
+              <h4>Общие вопросы</h4>
+            </div>
+            <ul>
+              <li>
+                <button class="link-button-2" id="faq1Btn">
+                  <a>Какие программы<br />используются в курсе?</a>
+                </button>
+              </li>
+              <li>
+                <button class="link-button-2" id="faq2Btn">
+                  <a>Какой компьютер<br />нужен для обучения?</a>
+                </button>
+              </li>
+              <li>
+                <button class="link-button-2" id="faq5Btn">
+                  <a>Есть ли помощь<br />в трудоустройстве?</a>
+                </button>
+              </li>
+              <li>
+                <button class="link-button-2" id="faq4Btn">
+                  <a>Даётся ли сертификат<br />после обучения?</a>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- Нижний блок - контакты -->
+          <div class="footer-section">
+            <div class="contact-info">
+              <h4>+7 (922) 782-77-98</h4>
+              <h4>
+                <a href="mailto:afentievsergy@gmail.com"
+                  >afentievsergy@gmail.com</a
+                >
+              </h4>
+            </div>
+            <div class="social-icons">
+              <div class="social-icon">
+                <button class="iconBtn" id="youtube">
+                  <img
+                    src="https://i.postimg.cc/LX9Jq6j8/16-A86m-Dd6co.png"
+                    alt="Превью"
+                    class="social-image-1"
+                  />
+                </button>
+              </div>
+              <div class="social-icon">
+                <button class="iconBtn" id="VK">
+                  <img
+                    src="https://i.postimg.cc/v8S4ByTG/80d71d45e36bd90000f2428ae05832a5-1.png"
+                    alt="Превью"
+                    class="social-image-2"
+                  />
+                </button>
+              </div>
+              <div class="social-icon">
+                <button class="iconBtn" id="artstation">
+                  <img
+                    src="https://i.postimg.cc/15k4GKDT/artstation.png"
+                    alt="Превью"
+                    class="social-image-3"
+                  />
+                </button>
+              </div>
+              <div class="social-icon">
+                <button class="iconBtn" id="discord">
+                  <img
+                    src="https://i.postimg.cc/d1NVLRq5/pasted-from-clipboard.png"
+                    alt="Превью"
+                    class="social-image-4"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright ВНЕ footer-content, но ВНУТРИ footer-container -->
+      <div class="copyright">&copy; 2025 Afentev. Все права защищены.</div>
+    </footer>
+
+    <script>
+      // Функция для настройки кнопок
+      function setupButton(buttonId, targetUrl) {
+        const button = document.getElementById(buttonId);
+        if (button) {
+          button.addEventListener("click", function () {
+            window.location.href = targetUrl;
+          });
+        }
+      }
+
+      // Настройка всех кнопок
+      setupButton("headerCoursesBtn", "Все курсы.html");
+      setupButton("logoLink", "index.html");
+      setupButton("studentsLink", "index.html#works");
+      setupButton("structureLink", "index.html#structure");
+      setupButton("iconLink", "Личный кабинет - Мои курсы.html");
+
+      setupButton("editBtn", "Личный кабинет - Настройки.html");
+      setupButton("my-cources-btn", "Личный кабинет - Мои курсы.html");
+      setupButton("streams-btn", "Личный кабинет - Стримы.html");
+      setupButton("all-cources-btn", "Личный кабинет - Все курсы.html");
+      setupButton("propsLink", "index.html#directions");
+      setupButton("weaponLink", "index.html#directions");
+      setupButton("youtube", "https://www.youtube.com/@Afentev");
+      setupButton("VK", "https://vk.com/id488882472");
+      setupButton("artstation", "https://www.artstation.com/afentev");
+      setupButton("discord", "https://discord.gg/mV3UcUJd");
+
+      // Обработчики для кнопок FAQ в подвале
+      document.querySelectorAll('[id^="faq"]').forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const questionNum = this.id.match(/\d+/)[0];
+          this.classList.add("clicked");
+          setTimeout(() => {
+            window.location.href = "FAQ.html#q-" + questionNum;
+          }, 300);
+        });
+      });
+
+      // Функция для загрузки и применения данных профиля
+      function loadProfileData() {
+        const savedData = localStorage.getItem("profileData");
+        if (savedData) {
+          try {
+            const profileData = JSON.parse(savedData);
+
+            // Обновляем иконку профиля в шапке
+            const headerIcon = document.querySelector("#iconLink .small-icon");
+            if (headerIcon && profileData.avatar) {
+              headerIcon.src = profileData.avatar;
+            }
+
+            // Обновляем основную иконку профиля
+            const profileIcon = document.querySelector(".profile-icon");
+            if (profileIcon && profileData.avatar) {
+              profileIcon.src = profileData.avatar;
+            }
+
+            // Обновляем шапку профиля
+            const profileHeader = document.querySelector(".profile-header");
+            if (profileHeader && profileData.banner) {
+              profileHeader.src = profileData.banner;
+            }
+
+            // Обновляем имя и информацию
+            const usernameElement = document.querySelector(".username h2");
+            const userInfoElement = document.querySelector(
+              ".username .standart"
+            );
+
+            if (
+              usernameElement &&
+              profileData.firstName &&
+              profileData.lastName
+            ) {
+              usernameElement.textContent = `${profileData.firstName} ${profileData.lastName}`;
+            }
+
+            if (userInfoElement && profileData.info) {
+              userInfoElement.textContent = profileData.info;
+            }
+          } catch (e) {
+            console.error("Ошибка при загрузке данных профиля:", e);
+          }
+        }
+      }
+
+      // Загружаем данные при загрузке страницы
+      document.addEventListener("DOMContentLoaded", loadProfileData);
+
+      // Добавляем обработчик для обновления при возврате на страницу
+      window.addEventListener("pageshow", loadProfileData);
+
+      //Синхронизация с другими страницами
+      window.addEventListener("storage", function (event) {
+        if (event.key === "profileData") {
+          loadProfileData();
+        }
+      });
+    </script>
+  </body>
+</html>

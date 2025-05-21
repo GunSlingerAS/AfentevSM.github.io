@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+      @font-face {
+        font-family: "Actay Wide";
+        src: url("fonts/ActayWide-Bold.woff2") format("woff2"),
+          url("fonts/ActayWide-Bold.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+      }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #fafaff;
+  color: #333;
+}
+
+.padding {
+  width: 1280px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+}
+
+.header-block {
+  width: 1280px;
+  height: 758px;
+  display: flex;
+  flex-direction: column;
+}
+
+.body-block {
+  width: 1280px;
+  height: 832px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafaff;
+}
+
+/*Стили текста*/
+.button-style--small {
+  font-family: "Montserrat";
+    sans-serif;
+  font-size: 18px !important;
+  font-weight: 300; /* Regular начертание */
+  font-style: normal;
+  line-height: 1.2;
+}
+
+.button-style--big {
+  font-size: 20px;
+}
+
+h1 {
+  font-family: "Montserrat";
+    sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-family: "Montserrat";
+    sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+h3{
+  font-family: "Montserrat";
+  sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  line-height: 1.3;
+}
+
+h4{
+  font-family: "Montserrat";
+  sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  line-height: 1.3;
+}
+
+p{
+  font-family: "Montserrat";
+font-size: 18px !important;
+font-weight: 300;
+font-style: normal;
+line-height: 1.2;
+}
+
+.nav-link {
+  color: white !important;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+header {
+  height: 75px;
+  width: 100%;
+  background-color: #0d0a0b;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.padding-header{
+  width: 1280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 120px;
+  padding-right: 120px;
+  height: 100%;
+}
+
+.logo-container {
+  width: 60px;
+  height: 60px;
+}
+
+.logo-icon {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 561px;
+  height: 32px;
+}
+
+.text-block-1 {
+  height: auto;
+  width: auto;
+  color: #fafaff;
+}
+
+.small-button {
+  min-height: 41px;
+  min-width: 155px;
+  max-width: 170px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #264c12;
+  color: #fafaff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.small-button:hover {
+  background-color: #152a0a;
+}
+
+.small-button:active {
+  border: 2px solid #264c12;
+  padding-left: 18px;
+  padding-right: 18px;
+  color: #264c12;
+  background-color: transparent;
+  transform: scale(0.98);
+}
+
+.big-button {
+  height: 48px;
+  width: 190px;
+  background-color: #264c12;
+  color: #fafaff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.big-button:hover {
+  background-color: #152a0a;
+}
+
+.big-button:active {
+  border: 2px solid #264c12;
+  padding-left: 18px;
+  padding-right: 18px;
+  color: #264c12;
+  stroke-width: 2px;
+  background-color: transparent;
+  transform: scale(0.98);
+}
+
+.link-button {
+  border: none;
+  background-color: transparent;
+  color:#fafaff;
+}
+
+.link-button-2{
+  text-align: end;
+  border: none;
+  background-color: transparent;
+  color:#fafaff;
+}
+
+/* Основной контент */
+.greenbox-container{
+  height: 0px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.greenbox{
+  height: 390px;
+  width: 100%;
+  background-color: #8BBA49;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-1 {
+  height: 390px;
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-top: 143px;
+  padding-left: 217px;
+  color: #0d0a0b;
+  position:relative;
+  z-index: 2;
+}
+
+.hero-2 {
+  height: auto;
+  width: 1280px;
+  padding-left: 217px;
+  padding-top: 57px;
+}
+
+.photo-container {
+  position: relative;
+  height: 0px;
+}
+
+.floating-photo {
+  position: absolute;
+  z-index: 800;
+  width: 400px;
+  top: -330px;
+  left: 700px;
+}
+
+/* Секция направлений */
+
+.direction-block{
+  height: 832px;
+  width: 1280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafaff;
+  color: #0d0a0b;
+}
+
+.directions {
+  width: 1060px;
+  height: 673px;
+}
+
+.topic{
+  height: 56px;
+  width: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 20px;
+}
+
+.topic-2{
+  display: flex;
+  width: auto;
+  height: 55px;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 20px;
+  padding-left:20px;
+}
+
+.direction-cards {
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+
+.direction-card {
+  height: 601px;
+  width: 520px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0 0 0 2px #0d0a0b;
+  color: #0d0a0b;
+}
+
+.preview-1 {
+  width: 520px;
+  height: 232px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.preview-image-1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.text-padding{
+  padding-left:20px;
+  padding-right:20px;
+}
+
+.button-space{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+  padding-bottom: 30px;
+  padding-right: 20px;
+}
+
+/* Секция об авторе */
+.author {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height:586px;
+}
+
+.author-content {
+  width: 1060px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.author-container {
+  width: 296px;
+  height: 296px;
+  background-color: #2f333d;
+  border-radius: 10px;
+}
+
+.author-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+.author-info{
+  width: 720px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.topic-3{
+  height: 40px;
+}
+
+.border-line{
+  width:auto;
+  height: 3px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #0d0a0b;
+}
+/* Секция структуры обучения */
+.structure {
+  width: 1060px;
+  height: 680px;
+  display: flex;
+  flex-direction: column;
+  color:#0d0a0b;
+}
+
+.border-line-2{
+  width:auto;
+  height: 3px;
+  background-color: #0d0a0b;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.structure-items {
+  width: 1060px;
+  height: 607px;
+  display: flex;
+  flex-direction: column;
+}
+
+.structure-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.structure-block{
+  height: 170px;
+  width: 340px;
+  border-radius: 20px;
+  color: #0d0a0b;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+      /* Карусель работ студентов */
+      .students-works-section {
+        width: 1040px;
+        margin-left: 120px;
+        margin-top: 80px;
+        margin-bottom: 100px;
+      }
+
+      .works-carousel {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .works-container {
+        display: flex;
+        gap: 10px;
+        transition: transform 0.5s ease;
+        padding-bottom: 20px;
+      }
+
+      .work-item {
+        flex: 0 0 340px;
+        height: 457px;
+        border-radius: 20px;
+        box-shadow: inset 0 0 0 2px #0d0a0b;
+      }
+
+      .work-image {
+        width: 100%;
+        height: 270px;
+        background-color: #0d0a0b;
+        border-radius: 20px 20px 0 0;
+        overflow: hidden;
+      }
+
+      .work-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .work-author {
+        padding: 20px 20px 10px;
+        font-weight: bold;
+      }
+
+      .work-comment {
+        padding: 0 20px 20px;
+      }
+
+      .carousel-nav {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .carousel-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ccc;
+        border: none;
+        cursor: pointer;
+      }
+
+      .carousel-dot.active {
+        background: #264c12;
+      }
+
+/* Подвал сайта */
+footer {
+  height: 527px;
+  min-height: 527px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d0a0b;
+  padding-bottom: 20px;
+  margin-top: auto;
+}
+
+.footer-container {
+  width: 1280px;
+  color: #fafaff;
+  padding: 36px 116px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 527px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom:40px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.title-h4 {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.footer-section ul {
+  margin-top: 15px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding-left: 0;
+}
+
+.footer-section li {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  width: 100%;
+}
+
+.footer-section a {
+  font-family: "Montserrat";
+  font-size: 16px;
+  color:#fafaff;
+  text-decoration: none;
+  transition: color 0.3s;
+  width: 100%;
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+.footer-section-1{
+    display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-section-2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-sections-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBtn{
+  border: none;
+  background-color: transparent;
+}
+
+.social-image-1{
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
+  object-position: center;
+}
+
+.social-image-2{
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
+  object-position: center;
+}
+
+.social-image-3{
+  width: 75%;
+  height: 75%;
+  object-fit:fill;
+  object-position: center;
+}
+
+.social-image-4{
+  width: 90%;
+  height: 90%;
+  object-fit:fill;
+  object-position: center;
+}
+
+.registration-form {
+  height: width;
+  width: 520px;
+  background-color: #8BBA49;
+  border-radius: 20px;
+  color: #0d0a0b;
+  padding: 20px;
+}
+
+.registration-form input{
+  width: 100%;
+  height: 41px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  border-radius: 40px;
+  border: none;
+}
+
+.registration-form button{
+  height: 41px;
+  min-width: 155px;
+  max-width: 170px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #264c12;
+  color: #fafaff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkbox-group {
+  margin: 15px 0;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.checkbox-group input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.contact-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #8BBA49;
+}
+
+.copyright {
+  background-color: #0d0a0b;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #fafaff;
+  color: #fafaff;
+  font-size: 14px;
+  margin-top: 0;
+}
+    </style>
+  </head>
+  <body>
+    <!-- Шапка сайта -->
+    <header>
+      <div class="padding-header">
+        <div class="logo-container">
+          <button class="link-button" id="logoLink">
+            <img
+              src="https://i.postimg.cc/qMpJBJCZ/icons8-gaming-hand-96.png"
+              alt="Логотип Gaming Hand"
+              class="logo-icon"
+            />
+          </button>
+        </div>
+        <div class="header-bar">
+          <div class="text-block-1">
+            <button class="link-button" id="headerCoursesBtn">
+              <p class="button-style--small">Все курсы</p>
+            </button>
+          </div>
+          <div class="text-block-1">
+            <a href="#works" class="nav-link"
+              ><p class="button-style--small">Работы студентов</p></a
+            >
+          </div>
+          <div class="text-block">
+            <a href="#structure" class="nav-link"
+              ><p class="button-style-small">Структура обучения</p></a
+            >
+          </div>
+        </div>
+        <div class="profile-container">
+          <button class="small-button" id="profileBtn">
+            <p class="button-style--small">Профиль</p>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!--Тело сайта-->
+    <div class="greenbox-container"><div class="greenbox"></div></div>
+    <div class="padding">
+      <!-- Герой-секция -->
+      <div class="header-block" id="hero">
+        <section class="hero-1">
+          <h1>
+            Прокачай<br />
+            свои навыки в 3D
+          </h1>
+          <h3>&mdash; Бесплатные гайды по основам 3D</h3>
+          <h3>&mdash; Полезные советы в дискорде</h3>
+        </section>
+        <div class="photo-container">
+          <img
+            src="https://i.postimg.cc/yYkWF6vp/afentev-sergey-3-3.png"
+            alt="Автор курсов Сергей Афентьев"
+            class="floating-photo"
+          />
+        </div>
+        <div class="hero-2">
+          <button class="big-button" id="heroCoursesBtn">
+            <p class="button-style--big">Выбрать курс</p>
+          </button>
+        </div>
+      </div>
+
+      <!-- Секция направлений -->
+      <div class="direction-block">
+        <section class="directions" id="directions">
+          <div class="topic">
+            <h2>НАПРАВЛЕНИЯ</h2>
+          </div>
+          <div class="direction-cards">
+            <div class="direction-card">
+              <div class="preview-1">
+                <img
+                  src="https://i.postimg.cc/q7P7rWnJ/6595ecedef3e41aa266c4b42c1ce2bb8.png"
+                  alt="Превью 1"
+                  class="preview-image-1"
+                />
+              </div>
+              <div class="topic-2">
+                <h3>ПРОПСЫ</h3>
+              </div>
+              <div class="text-padding">
+                <p>
+                  Курс направлен на понимание процессов работы<br />
+                  над midpoly моделями и их оптимизации<br />
+                  для игрового движка с добавлением собственной<br />
+                  коллизии, а также создания тайловых текстур<br />
+                  в Substance Designer
+                </p>
+              </div>
+              <div class="button-space">
+                <button
+                  class="small-button choose-course-btn"
+                  data-course="props"
+                >
+                  <p class="button-style--small">Выбрать курс</p>
+                </button>
+              </div>
+            </div>
+            <div class="direction-card">
+              <div class="preview-1">
+                <img
+                  src="https://i.postimg.cc/HnqG8CYn/afentev-sergey-1-1.jpg"
+                  alt="Превью 1"
+                  class="preview-image-1"
+                />
+              </div>
+              <div class="topic-2">
+                <h3>ОРУЖИЕ</h3>
+              </div>
+              <div class="text-padding">
+                <p>
+                  Курс направлен на знакомство с принципами<br />
+                  lowpoly моделирования, создания<br />
+                  оптимизированных UV-развёрток, работы<br />
+                  с инструментами Zbrush и создания highpoly<br />
+                  моделей, а также запекания текстур<br />
+                  и уникального текстурирования<br />
+                  в Substance Painter
+                </p>
+              </div>
+              <div class="button-space">
+                <button
+                  class="small-button choose-course-btn"
+                  data-course="weapon"
+                >
+                  <p class="button-style--small">Выбрать курс</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Секция об авторе -->
+      <div class="direction-block">
+        <div class="author" id="author">
+          <div class="topic">
+            <h2>АВТОР КУРСОВ</h2>
+          </div>
+          <div class="author-content">
+            <div class="author-container">
+              <img
+                src="https://i.postimg.cc/sDzRKrdz/snapedit-1743532435617.png"
+                alt="Превью 1"
+                class="author-image"
+              />
+            </div>
+            <div class="author-info">
+              <div class="topic-3">
+                <h3>Сергей Афентьев</h3>
+              </div>
+              <p>
+                Hard Surface Artist в студии Anstar<br />
+                Занимаюсь 3D с 2021 года<br />
+                Специализируюсь на PBR материалах
+              </p>
+              <div class="border-line"></div>
+              <div class="topic-3">
+                <h3>Мой опыт</h3>
+              </div>
+              <p>
+                Мой путь в становлении профессиональным weapon artist-ом,
+                который<br />продолжается и по сей день, был весьма тернист: в
+                виду моей<br />
+                бытности школьником я не имел достаточно средств, чтобы<br />
+                приобрести не то что бы мощную систему для работы над
+                графикой,<br />
+                но и даже купить курсы или программы, благодаря чему в первые<br />
+                годы я постигал моделирование на стареньком ноутбуке,<br />
+                а пул моих программ ограничивался Блендером. В своё<br />
+                время я буквально охотился за знаниями, поскольку они<br />
+                не лежат на поверхности. В особенности это касается тонкостей<br />углубленного
+                понимания компьютерной графики. И эти курсы<br />я решил
+                создать, чтобы помочь таким же как и я новичкам с огнём<br />
+                в глазах развить навыки.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Секция структуры обучения -->
+      <div class="direction-block">
+        <section class="structure" id="structure">
+          <div class="topic">
+            <h2>СТРУКТУРА ОБУЧЕНИЯ</h2>
+          </div>
+          <div class="structure-items">
+            <div class="border-line-2"></div>
+            <div class="structure-item">
+              <div class="structure-block">
+                <img
+                  src="https://i.postimg.cc/KYyFzqtG/1.jpg"
+                  alt="Превью"
+                  class="preview-image-1"
+                />
+              </div>
+              <div class="structure-block">
+                <h3>Личный кабинет студента</h3>
+              </div>
+              <div class="structure-block">
+                <p>
+                  В нём ты будешь смотреть преобретённые тобой лекции и читать
+                  статьи в удобном формате.
+                </p>
+              </div>
+            </div>
+            <div class="border-line-2"></div>
+            <div class="structure-item">
+              <div class="structure-block">
+                <img
+                  src="https://i.postimg.cc/50NhYZyV/2.jpg"
+                  alt="Превью"
+                  class="preview-image-1"
+                />
+              </div>
+              <div class="structure-block">
+                <h3>Бесплатный старт для новичков</h3>
+              </div>
+              <div class="structure-block">
+                <p>
+                  В зависимости от уровня навыков можно пройти бесплатные курсы
+                  для новичков, чтобы на всех парах вкатиться в индустрию.
+                </p>
+              </div>
+            </div>
+            <div class="border-line-2"></div>
+            <div class="structure-item">
+              <div class="structure-block">
+                <img
+                  src="https://i.postimg.cc/cCP2zCmx/3.jpg"
+                  alt="Превью"
+                  class="preview-image-1"
+                />
+              </div>
+              <div class="structure-block">
+                <h3>Обратная связь в Дискорде</h3>
+              </div>
+              <div class="structure-block">
+                <p>
+                  Если возникнут вопросы по каким-то моментам, можно вступить к
+                  нам в Дискорд, где всегда готовы поделиться опытом.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Карусель работ студентов -->
+      <div class="students-works-section" id="works">
+        <h2>РАБОТЫ СТУДЕНТОВ</h2>
+        <div class="works-carousel">
+          <div class="works-container">
+            <div class="work-item">
+              <div class="work-image">
+                <img
+                  src="https://i.postimg.cc/kgQvrGcj/1.png"
+                  alt="Работа студента"
+                />
+              </div>
+              <div class="work-author">
+                <h3>Виктор Тимофеев</h3>
+              </div>
+              <div class="work-comment">
+                <p>
+                  Благодаря полученным знаниям я глубже погрузился в PBR
+                  текстурирование.
+                </p>
+              </div>
+            </div>
+            <div class="work-item">
+              <div class="work-image">
+                <img
+                  src="https://i.postimg.cc/1RbdsgGP/2.png"
+                  alt="Работа студента"
+                />
+              </div>
+              <div class="work-author">
+                <h3>Аркадий Птицын</h3>
+              </div>
+              <div class="work-comment">
+                <p>
+                  Спасибо сообществу за поддержку на сервере, очень помогали
+                  советом, когда я делал мою винтовку.
+                </p>
+              </div>
+            </div>
+            <div class="work-item">
+              <div class="work-image">
+                <img
+                  src="https://i.postimg.cc/wjQ4X0ST/3.png"
+                  alt="Работа студента"
+                />
+              </div>
+              <div class="work-author">
+                <h3>Евгения Юдина</h3>
+              </div>
+              <div class="work-comment">
+                <p>
+                  Большое спасибо за информацию из курсов, самостоятельно искать
+                  всё было бы мучительно долго.
+                </p>
+              </div>
+            </div>
+            <div class="work-item">
+              <div class="work-image">
+                <img
+                  src="https://i.postimg.cc/7LQV9cXD/4.png"
+                  alt="Работа студента"
+                />
+              </div>
+              <div class="work-author">
+                <h3>Иван</h3>
+              </div>
+              <div class="work-comment">
+                <p>
+                  Благодаря курсам я понял как создавать объекты окружения для
+                  игр
+                </p>
+              </div>
+            </div>
+            <div class="work-item">
+              <div class="work-image">
+                <img
+                  src="https://i.postimg.cc/3RsZ5vPc/5.png"
+                  alt="Работа студента"
+                />
+              </div>
+              <div class="work-author">
+                <h3>Алексей</h3>
+              </div>
+              <div class="work-comment">
+                <p>Отличные курсы, помогли освоить Substance Painter</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-nav">
+            <button class="carousel-dot active"></button>
+            <button class="carousel-dot"></button>
+            <button class="carousel-dot"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Подвал сайта-->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="registration-form">
+              <div class="topic">
+                <h3>Регистрация профиля</h3>
+              </div>
+              <input type="text" placeholder="Ваше имя" />
+              <input type="email" placeholder="Email" />
+              <button class="small-button" id="shareBtn">
+                <p class="small-button--white">Отправить</p>
+              </button>
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" /> Я согласен с Политикой обработки
+                  персональных данных и договором публичной оферты
+                </label>
+                <label>
+                  <input type="checkbox" /> Я согласен получить рекламную
+                  рассылку и ознакомился с Согласием на получение рекламной
+                  рассылки
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-sections-wrapper">
+            <div class="footer-section-1">
+              <div class="footer-section">
+                <div class="title-h4">
+                  <h4>Направления</h4>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#directions" class="direction-link">пропсы</a>
+                  </li>
+                  <li>
+                    <a href="#directions" class="direction-link">оружие</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <div class="title-h4">
+                  <h4>Общие вопросы</h4>
+                </div>
+                <ul>
+                  <li>
+                    <button class="link-button-2" id="faq1Btn">
+                      <a>Какие программы<br />используются в курсе?</a>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="link-button-2" id="faq2Btn">
+                      <a>Какой компьютер<br />нужен для обучения?</a>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="link-button-2" id="faq5Btn">
+                      <a>Есть ли помощь<br />в трудоустройстве?</a>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="link-button-2" id="faq4Btn">
+                      <a>Даётся ли сертификат<br />после обучения?</a>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Нижний блок - контакты -->
+            <div class="footer-section-2">
+              <div class="contact-info">
+                <h4>+7 (922) 782-77-98</h4>
+                <h4>
+                  <a href="mailto:afentievsergy@gmail.com"
+                    >afentievsergy@gmail.com</a
+                  >
+                </h4>
+              </div>
+              <div class="social-icons">
+                <div class="social-icon">
+                  <button class="iconBtn" id="youtube">
+                    <img
+                      src="https://i.postimg.cc/LX9Jq6j8/16-A86m-Dd6co.png"
+                      alt="Превью"
+                      class="social-image-1"
+                    />
+                  </button>
+                </div>
+                <div class="social-icon">
+                  <button class="iconBtn" id="VK">
+                    <img
+                      src="https://i.postimg.cc/v8S4ByTG/80d71d45e36bd90000f2428ae05832a5-1.png"
+                      alt="Превью"
+                      class="social-image-2"
+                    />
+                  </button>
+                </div>
+                <div class="social-icon">
+                  <button class="iconBtn" id="artstation">
+                    <img
+                      src="https://i.postimg.cc/15k4GKDT/artstation.png"
+                      alt="Превью"
+                      class="social-image-3"
+                    />
+                  </button>
+                </div>
+                <div class="social-icon">
+                  <button class="iconBtn" id="discord">
+                    <img
+                      src="https://i.postimg.cc/d1NVLRq5/pasted-from-clipboard.png"
+                      alt="Превью"
+                      class="social-image-4"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright ВНЕ footer-content, но ВНУТРИ footer-container -->
+        <div class="copyright">&copy; 2025 Afentev. Все права защищены.</div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Обработчики для основных кнопок
+        function setupButton(buttonId, pageUrl) {
+          const btn = document.getElementById(buttonId);
+          if (btn) {
+            btn.addEventListener("click", function () {
+              this.classList.add("clicked");
+              setTimeout(() => {
+                window.location.href = pageUrl;
+              }, 300);
+            });
+          }
+        }
+
+        // Настройка кнопок
+        setupButton("profileBtn", "Личный кабинет - Мои курсы.html");
+        setupButton("shareBtn", "Личный кабинет - Мои курсы.html");
+        setupButton("coursesBtn", "Все курсы.html");
+        setupButton("headerCoursesBtn", "Все курсы.html");
+        setupButton("heroCoursesBtn", "Все курсы.html");
+        setupButton("logoLink", "index.html");
+        setupButton("youtube", "https://www.youtube.com/@Afentev");
+        setupButton("VK", "https://vk.com/id488882472");
+        setupButton("artstation", "https://www.artstation.com/afentev");
+        setupButton("discord", "https://discord.gg/mV3UcUJd");
+
+        // Обработчики для кнопок FAQ в подвале
+        document.querySelectorAll('[id^="faq"]').forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // Получаем номер вопроса из ID кнопки (например, "faq1Btn" → "1")
+            const questionNum = this.id.match(/\d+/)[0];
+
+            // Добавляем класс clicked для анимации
+            this.classList.add("clicked");
+
+            // Перенаправляем на страницу FAQ с соответствующим хэшем
+            setTimeout(() => {
+              window.location.href = "FAQ.html#q-" + questionNum;
+            }, 300);
+          });
+        });
+
+        // Обработчики для кнопок "Выбрать курс" в карточках
+        document.querySelectorAll(".choose-course-btn").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const courseType = this.getAttribute("data-course");
+            this.classList.add("clicked");
+            setTimeout(() => {
+              if (courseType === "props") {
+                window.location.href = "Все курсы.html";
+              } else if (courseType === "weapon") {
+                window.location.href = "Все курсы.html";
+              } else {
+                window.location.href = "Все курсы.html";
+              }
+            }, 300);
+          });
+        });
+
+        // Обработчики для карусели
+        const carousel = document.querySelector(".works-container");
+        const dots = document.querySelectorAll(".carousel-dot");
+        let currentIndex = 0;
+        const itemWidth = 340 + 10;
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+            currentIndex = index;
+            updateCarousel();
+          });
+        });
+
+        function updateCarousel() {
+          carousel.style.transform = `translateX(-${
+            currentIndex * itemWidth * 2
+          }px)`;
+
+          dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+          });
+        }
+
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % dots.length;
+          updateCarousel();
+        }, 5000);
+
+        updateCarousel();
+
+        // Улучшенная обработка прокрутки для навигационных ссылок в шапке
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+              // Вычисляем позицию с учетом отступа 120px
+              const targetPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition = targetPosition + window.pageYOffset - 120;
+
+              // Плавная прокрутка
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+
+              // Добавляем хеш в URL без перезагрузки страницы
+              history.pushState(null, null, targetId);
+
+              // Подсветка целевого элемента
+              targetElement.classList.add("highlighted");
+              setTimeout(() => {
+                targetElement.classList.remove("highlighted");
+              }, 2000);
+            }
+          });
+        });
+
+        // Обработка хеша при загрузке страницы
+        function handleHashScroll() {
+          const hash = window.location.hash;
+
+          if (hash) {
+            // Сначала прокручиваем наверх
+            window.scrollTo(0, 0);
+
+            // Затем через небольшой таймаут прокручиваем к целевому элементу
+            setTimeout(() => {
+              const target = document.querySelector(hash);
+              if (target) {
+                // Вычисляем позицию с учетом отступа 120px
+                const targetPosition = target.getBoundingClientRect().top;
+                const offsetPosition =
+                  targetPosition + window.pageYOffset - 120;
+
+                // Плавная прокрутка
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: "smooth",
+                });
+
+                // Подсветка
+                target.classList.add("highlighted");
+                setTimeout(() => {
+                  target.classList.remove("highlighted");
+                }, 2000);
+              }
+            }, 100); // Уменьшенный таймаут для более плавного перехода
+          }
+        }
+
+        // Вызываем при загрузке
+        window.addEventListener("load", function () {
+          // Сначала ждем полной загрузки страницы
+          setTimeout(handleHashScroll, 0);
+        });
+
+        // Обработчик для изменений хеша (при кликах по ссылкам на этой же странице)
+        window.addEventListener("hashchange", function () {
+          // Для hashchange не нужно сначала наверх, сразу плавно к разделу
+          const hash = window.location.hash;
+          if (hash) {
+            setTimeout(() => {
+              const target = document.querySelector(hash);
+              if (target) {
+                const targetPosition = target.getBoundingClientRect().top;
+                const offsetPosition =
+                  targetPosition + window.pageYOffset - 120;
+
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: "smooth",
+                });
+
+                setTimeout(() => {
+                  target.classList.remove("highlighted");
+                }, 2000);
+              }
+            }, 100);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

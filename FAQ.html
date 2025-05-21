@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+      @font-face {
+        font-family: "Actay Wide";
+        src: url("fonts/ActayWide-Bold.woff2") format("woff2"),
+          url("fonts/ActayWide-Bold.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+      }
+      .highlighted {
+        background-color: #f0f8ff;
+        transition: background-color 0.5s ease;
+      }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #fafaff;
+  color: #333;
+}
+
+.padding {
+  width: 1040px;
+  padding-top: 55px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  color:#0d0a0b;
+}
+
+.header-block {
+  width: 1280px;
+  height: 758px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafaff;
+}
+
+.body-block {
+  width: 1280px;
+  height: 832px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafaff;
+}
+
+/*Стили текста*/
+.button-style--small {
+  font-family: "Montserrat";
+    sans-serif;
+  font-size: 18px !important;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+.button-style--big {
+  font-size: 20px;
+}
+
+h1 {
+  font-family: "Montserrat";
+    sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-family: "Montserrat";
+    sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+
+h3{
+  font-family: "Montserrat";
+  sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  line-height: 1.3;
+}
+
+h4{
+  font-family: "Montserrat";
+  sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+  line-height: 1.3;
+}
+
+p{
+  font-family: "Montserrat";
+font-size: 18px !important;
+font-weight: 300;
+font-style: normal;
+line-height: 1.2;
+}
+
+.nav-link {
+  color: white !important;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+header {
+  height: 75px;
+  width: 100%;
+  background-color: #0d0a0b;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.padding-header{
+  width: 1280px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 120px;
+  padding-right: 120px;
+  height: 100%;
+}
+
+.logo-container {
+  width: 60px;
+  height: 60px;
+}
+
+.logo-icon {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 561px;
+  height: 32px;
+}
+
+.text-block-1 {
+  height: auto;
+  width: auto;
+  color: #fafaff;
+}
+
+.small-button {
+  min-height: 41px;
+  min-width: 155px;
+  max-width: 170px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #264c12;
+  color: #fafaff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.small-button:hover {
+  background-color: #152a0a;
+}
+
+.small-button:active {
+  border: 2px solid #264c12;
+  padding-left: 18px;
+  padding-right: 18px;
+  color: #264c12;
+  background-color: transparent;
+  transform: scale(0.98);
+}
+
+.big-button {
+  height: 48px;
+  width: 190px;
+  background-color: #264c12;
+  color: #fafaff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.big-button:hover {
+  background-color: #152a0a;
+}
+
+.big-button:active {
+  border: 2px solid #264c12;
+  padding-left: 18px;
+  padding-right: 18px;
+  color: #264c12;
+  stroke-width: 2px;
+  background-color: transparent;
+  transform: scale(0.98);
+}
+
+.link-button {
+  border: none;
+  background-color: transparent;
+  color:#fafaff;
+}
+
+.link-button-2{
+  text-align: end;
+  border: none;
+  background-color: transparent;
+  color:#fafaff;
+}
+
+/*Название*/
+.big-title{
+  font-size: 48px;
+  z-index: 100;
+}
+
+.topic{
+  height: 56px;
+  width: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 20px;
+}
+
+.greenbox-container{
+  height: 0px;
+  width: 100%;
+}
+
+.greenbox{
+  height: 165px;
+  width: 100%;
+  background-color: #8BBA49;
+}
+
+/*блоки вопросов*/
+.Q-container{
+  width: 100%;
+  height: auto;
+  display:flex;
+  flex-direction: column;
+  padding-top: 86px;
+  padding-bottom: 86px;
+}
+
+.Q {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 17px;
+  transition: height 0.3s ease;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 2px #0d0a0b;
+  border-radius: 21px;
+}
+
+.Q.expanded {
+  height: auto !important;
+  padding-bottom: 15px;
+  box-shadow: inset 0 0 0 2px #0d0a0b;
+  border-radius: 21px;
+}
+
+.Q-title{
+  height: 41px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Q-title p {
+  font-weight: 500;
+}
+
+.answer-container {
+  width: 100%;
+  padding: 15px 15px 5px;
+  display: none;
+  color: #0d0a0b;
+}
+
+.answer-container p {
+  margin-bottom: 10px;
+}
+
+.sort-icon-container{
+  justify-self: end;
+  height: 23px;
+  width:23px;
+  border: none;
+  background-color:#fafaff;
+}
+
+.sort-icon-container:hover{
+  filter: opacity(50%);
+}
+
+.sort-icon-container:active{
+  rotate: 180deg;
+  transition-duration: 1s;
+}
+
+.sort-icon{
+  height:100%;
+  width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Подвал сайта */
+footer {
+  height: 527px;
+  min-height: 527px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d0a0b;
+  padding-bottom: 20px;
+}
+
+.footer-container {
+  width: 1280px;
+  color: #fafaff;
+  padding: 36px 116px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 527px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom:40px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.title-h4 {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.footer-section ul {
+  margin-top: 15px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  padding-left: 0;
+}
+
+.footer-section li {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  width: 100%;
+}
+
+.footer-section a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+  width: 100%;
+}
+
+.footer-section a:hover {
+  color: white;
+}
+
+.footer-section-1{
+    display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-section-2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-sections-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBtn{
+  border: none;
+  background-color: transparent;
+}
+
+.social-image-1{
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
+  object-position: center;
+}
+
+.social-image-2{
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
+  object-position: center;
+}
+
+.social-image-3{
+  width: 75%;
+  height: 75%;
+  object-fit:fill;
+  object-position: center;
+}
+
+.social-image-4{
+  width: 90%;
+  height: 90%;
+  object-fit:fill;
+  object-position: center;
+}
+
+.registration-form {
+  height: width;
+  width: 520px;
+  background-color: #8BBA49;
+  border-radius: 20px;
+  color: #0d0a0b;
+  padding: 20px;
+}
+
+.registration-form input{
+  width: 100%;
+  height: 41px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  border-radius: 40px;
+  border: none;
+}
+
+.registration-form button{
+  height: 41px;
+  min-width: 155px;
+  max-width: 170px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #264c12;
+  color: #fafaff;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkbox-group {
+  margin: 15px 0;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.checkbox-group input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.contact-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #8BBA49;
+}
+
+.copyright {
+  background-color: #0d0a0b;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #fafaff;
+  color: #fafaff;
+  font-size: 14px;
+  margin-top: 0;
+}
+    </style>
+  </head>
+  <body>
+    <!-- Шапка сайта -->
+    <header>
+      <div class="padding-header">
+        <div class="logo-container">
+          <button class="link-button" id="logoLink">
+            <img
+              src="https://i.postimg.cc/qMpJBJCZ/icons8-gaming-hand-96.png"
+              alt="Логотип Gaming Hand"
+              class="logo-icon"
+            />
+          </button>
+        </div>
+        <div class="header-bar">
+          <div class="text-block-1">
+            <button class="link-button" id="headerCoursesBtn">
+              <p class="button-style--small">Все курсы</p>
+            </button>
+          </div>
+          <div class="text-block-1">
+            <button class="link-button" id="studentsLink">
+              <p class="button-style--small">Работы студентов</p>
+            </button>
+          </div>
+          <div class="text-block-1">
+            <button class="link-button" id="structureLink">
+              <p class="button-style--small">Структура обучения</p>
+            </button>
+          </div>
+        </div>
+        <div class="profile-container">
+          <button class="small-button" id="profileBtn">
+            <p class="button-style--small">Профиль</p>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="greenbox-container">
+      <div class="greenbox"></div>
+    </div>
+    <div class="padding">
+      <h2 class="big-title">Часто задаваемые<br />вопросы</h2>
+      <div class="Q-container">
+        <div class="Q">
+          <div class="Q-title">
+            <p>Какие программы используются на курсах?</p>
+            <button class="sort-icon-container">
+              <img
+                src="https://img.icons8.com/?size=100&id=16773&format=png&color=000000"
+                alt="Стрелка"
+                class="sort-icon"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="registration-form">
+              <div class="topic">
+                <h3>Регистрация профиля</h3>
+              </div>
+              <input type="text" placeholder="Ваше имя" />
+              <input type="email" placeholder="Email" />
+              <button class="small-button" id="shareBtn">
+                <p class="small-button--white">Отправить</p>
+              </button>
+              <div class="checkbox-group">
+                <label>
+                  <input type="checkbox" /> Я согласен с Политикой обработки
+                  персональных данных и договором публичной оферты
+                </label>
+                <label>
+                  <input type="checkbox" /> Я согласен получить рекламную
+                  рассылку и ознакомился с Согласием на получение рекламной
+                  рассылки
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-sections-wrapper">
+            <div class="footer-section-1">
+              <div class="footer-section">
+                <div class="title-h4">
+                  <h4>Направления</h4>
+                </div>
+                <ul>
+                  <li>
+                    <button class="link-button-2" id="propsLink">
+                      <a>пропсы</a>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="link-button-2" id="weaponLink">
+                      <a>оружие</a>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-section">
+                <div class="title-h4">
+                  <h4>Общие вопросы</h4>
+                </div>
+                <ul>
+                  <li>
+                    <button
+                      class="link-button-2"
+                      id="faq1Btn"
+                      data-question="Какие программы используются на курсах?"
+                    >
+                      <a>Какие программы<br />используются в курсе?</a>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="link-button-2"
+                      id="faq2Btn"
+                      data-question="Какой компьютер нужен для обучения?"
+                    >
+                      <a>Какой компьютер<br />нужен для обучения?</a>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="link-button-2"
+                      id="faq3Btn"
+                      data-question="Есть ли помощь в трудоустройстве?"
+                    >
+                      <a>Есть ли помощь<br />в трудоустройстве?</a>
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="link-button-2"
+                      id="faq4Btn"
+                      data-question="Даётся ли сертификат после обучения?"
+                    >
+                      <a>Даётся ли сертификат<br />после обучения?</a>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Нижний блок - контакты -->
+            <div class="footer-section-2">
+              <div class="contact-info">
+                <h4>+7 (922) 782-77-98</h4>
+                <h4>
+                  <a href="mailto:afentievsergy@gmail.com"
+                    >afentievsergy@gmail.com</a
+                  >
+                </h4>
+              </div>
+              <div class="social-icons">
+                <div class="social-icon">
+                  <button class="iconBtn" id="youtube">
+                    <img
+                      src="https://i.postimg.cc/LX9Jq6j8/16-A86m-Dd6co.png"
+                      alt="Превью"
+                      class="social-image-1"
+                    />
+                  </button>
+                </div>
+                <div class="social-icon">
+                  <button class="iconBtn" id="VK">
+                    <img
+                      src="https://i.postimg.cc/v8S4ByTG/80d71d45e36bd90000f2428ae05832a5-1.png"
+                      alt="Превью"
+                      class="social-image-2"
+                    />
+                  </button>
+                </div>
+                <div class="social-icon">
+                  <button class="iconBtn" id="artstation">
+                    <img
+                      src="https://i.postimg.cc/15k4GKDT/artstation.png"
+                      alt="Превью"
+                      class="social-image-3"
+                    />
+                  </button>
+                </div>
+                <div class="social-icon">
+                  <button class="iconBtn" id="discord">
+                    <img
+                      src="https://i.postimg.cc/d1NVLRq5/pasted-from-clipboard.png"
+                      alt="Превью"
+                      class="social-image-4"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright ВНЕ footer-content, но ВНУТРИ footer-container -->
+        <div class="copyright">&copy; 2025 Afentev. Все права защищены.</div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const questions = [
+          {
+            index: "1",
+            question: "Какие программы используются на курсах?",
+            answer: `
+              <p>На наших курсах используется профессиональный набор программ для 3D-моделирования и геймдева:</p>
+              <p>- Blender (основная программа для моделирования)</p>
+              <p>- ZBrush (для скульптинга высокополигональных моделей)</p>
+              <p>- Substance Painter (для текстурирования)</p>
+              <p>- Marmoset Toolbag (для рендеринга и презентации работ)</p>
+              <p>- Unreal Engine 5 (для финальной интеграции моделей)</p>
+            `,
+          },
+          {
+            index: "2",
+            question: "Какой компьютер нужен для обучения?",
+            answer: `
+              <p>Для комфортного обучения мы рекомендуем:</p>
+              <p>- Процессор: Intel i7 / AMD Ryzen 7 или выше</p>
+              <p>- Видеокарта: NVIDIA GTX 1660 / RTX 2060 или выше (желательно с 6+ GB памяти)</p>
+              <p>- Оперативная память: 16 GB минимум, 32 GB для сложных сцен</p>
+              <p>- SSD диск: 500 GB+ (программы и проекты занимают много места)</p>
+              <p>- Монитор с разрешением 1920x1080 или выше</p>
+              <p>Для начального уровня подойдёт и менее мощный компьютер, но для продвинутых задач потребуется хорошее железо.</p>
+            `,
+          },
+          {
+            index: "3",
+            question: "Сколько длится обучение?",
+            answer: `
+              <p>Продолжительность зависит от выбранного курса:</p>
+              <p>- Базовый курс: 3 месяца (12 недель)</p>
+              <p>- Профессиональный курс: 6 месяцев (24 недели)</p>
+              <p>- Интенсив: 1 месяц (4 недели, ежедневные занятия)</p>
+              <p>В неделю потребуется выделять 8-12 часов на обучение (лекции + практика).</p>
+              <p>После окончания основного курса вы получаете 1 месяц бесплатной поддержки от куратора.</p>
+            `,
+          },
+          {
+            index: "4",
+            question: "Даётся ли сертификат после обучения?",
+            answer: `
+              <p>Да, по окончании курса вы получаете:</p>
+              <p>1. Официальный сертификат нашей школы (электронная и печатная версии)</p>
+              <p>2. Рекомендательное письмо для работодателей (по запросу)</p>
+              <p>3. Помощь в составлении портфолио</p>
+              <p>4. Доступ в закрытый чат выпускников</p>
+              <p>Сертификат подтверждает успешное освоение программы и может быть полезен при трудоустройстве.</p>
+            `,
+          },
+          {
+            index: "5",
+            question: "Есть ли помощь в трудоустройстве?",
+            answer: `
+              <p>Наша школа оказывает комплексную поддержку в трудоустройстве:</p>
+              <p>- Подготовка резюме и портфолио</p>
+              <p>- Разбор тестовых заданий от студий</p>
+              <p>- Доступ к базе вакансий для наших студентов</p>
+              <p>- Рекомендации для стажировок</p>
+              <p>- Ярмарки вакансий с участием партнёрских студий</p>
+              <p>80% наших выпускников находят работу в течение 3 месяцев после окончания курсов.</p>
+            `,
+          },
+          {
+            index: "6",
+            question: "Можно ли обучаться с нуля?",
+            answer: `
+              <p>Да, большинство наших курсов рассчитаны на новичков:</p>
+              <p>- Пошаговое обучение от простого к сложному</p>
+              <p>- Подробные видеоуроки с практикой</p>
+              <p>- Поддержка кураторов 24/7</p>
+              <p>- Готовые шаблоны и материалы</p>
+              <p>- Разбор ошибок и индивидуальные консультации</p>
+              <p>Главное — ваше желание учиться и регулярно практиковаться. Опытные преподаватели помогут освоить все необходимые навыки.</p>
+            `,
+          },
+          {
+            index: "7",
+            question: "Какой график занятий?",
+            answer: `
+              <p>Мы предлагаем гибкий график обучения:</p>
+              <p>- Основные лекции: 2 раза в неделю по 2 часа (вечером по МСК)</p>
+              <p>- Все материалы доступны в записи</p>
+              <p>- Практические задания с дедлайнами (но можно сдавать досрочно)</p>
+              <p>- Индивидуальные консультации по предварительной записи</p>
+              <p>- Доступ к курсу сохраняется на 1 год после окончания</p>
+              <p>Вы можете совмещать обучение с работой или учёбой, занимаясь в удобное время.</p>
+            `,
+          },
+          {
+            index: "8",
+            question: "Есть ли пробный период?",
+            answer: `
+              <p>Да, мы предлагаем несколько вариантов познакомиться с курсом:</p>
+              <p>1. Бесплатный пробный урок — 2 часа живого занятия с преподавателем</p>
+              <p>2. Доступ к первым 3 урокам любого курса за 990 руб.</p>
+              <p>3. Возврат денег в течение 14 дней, если курс не подошёл</p>
+              <p>4. Бесплатные мастер-классы каждую неделю</p>
+              <p>После пробного периода вы можете продолжить обучение с того места, на котором остановились.</p>
+            `,
+          },
+        ];
+
+        const qContainer = document.querySelector(".Q-container");
+        qContainer.innerHTML = "";
+
+        // Создаем элементы вопросов
+        questions.forEach((item, index) => {
+          const qElement = document.createElement("div");
+          qElement.className = "Q";
+          qElement.style.height = "42px";
+          qElement.id = "q-" + item.index;
+
+          qElement.innerHTML = `
+    <div class="Q-title">
+      <p>${item.question}</p>
+      <button class="sort-icon-container">
+        <img
+          src="https://img.icons8.com/?size=100&id=16773&format=png&color=000000"
+          alt="Стрелка"
+          class="sort-icon"
+        />
+      </button>
+    </div>
+    <div class="answer-container" style="display: none;">
+      ${item.answer}
+    </div>
+  `;
+
+          qContainer.appendChild(qElement);
+
+          const button = qElement.querySelector(".sort-icon-container");
+          const answer = qElement.querySelector(".answer-container");
+          const icon = qElement.querySelector(".sort-icon");
+
+          button.addEventListener("click", function (e) {
+            e.stopPropagation();
+            toggleAnswer(qElement, answer, icon);
+          });
+
+          // Добавляем возможность открывать по клику на весь вопрос
+          qElement.addEventListener("click", function (e) {
+            if (
+              e.target === qElement ||
+              e.target.classList.contains("Q-title") ||
+              e.target.tagName === "P"
+            ) {
+              toggleAnswer(qElement, answer, icon);
+            }
+          });
+        });
+
+        // Обработчики для кнопок вопросов в подвале 1
+        document.querySelectorAll('[id^="faq"]').forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // Определяем номер вопроса по ID кнопки
+            const questionNumber = this.id
+              .replace("faq", "")
+              .replace("Btn", "");
+
+            // Перенаправляем на страницу FAQ с хэшем соответствующего вопроса
+            window.location.href = "FAQ.html#q-" + (questionNumber - 1);
+
+            // После загрузки страницы находим и открываем соответствующий вопрос
+            window.addEventListener("load", function () {
+              const targetQuestion = document.getElementById(
+                "q-" + (questionNumber - 1)
+              );
+              if (targetQuestion) {
+                const answer =
+                  targetQuestion.querySelector(".answer-container");
+                const icon = targetQuestion.querySelector(".sort-icon");
+
+                // Открываем нужный вопрос
+                answer.style.display = "block";
+                targetQuestion.classList.add("expanded");
+                icon.style.transform = "rotate(180deg)";
+
+                // Прокручиваем к вопросу
+                setTimeout(() => {
+                  targetQuestion.classList.remove("highlighted");
+                }, 2000);
+
+                targetQuestion.scrollIntoView({
+                  behavior: "smooth",
+                  block: "nearest",
+                });
+              }
+            });
+          });
+        });
+
+        function toggleAnswer(qElement, answer, icon) {
+          if (answer.style.display === "none" || !answer.style.display) {
+            // Открываем ответ
+            answer.style.display = "block";
+            qElement.classList.add("expanded");
+            icon.style.transform = "rotate(180deg)";
+
+            // Подсвечиваем элемент
+            qElement.classList.add("highlighted");
+            setTimeout(() => {
+              qElement.classList.remove("highlighted");
+            }, 2000);
+
+            // Прокручиваем к элементу
+            qElement.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          } else {
+            // Закрываем ответ
+            answer.style.display = "none";
+            qElement.classList.remove("expanded");
+            qElement.style.height = "42px";
+            icon.style.transform = "rotate(0deg)";
+          }
+        }
+
+        // Обработчики для кнопок вопросов в подвале 2
+        document.querySelectorAll('[id^="faq"]').forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const questionText = this.getAttribute("data-question");
+            const questions = document.querySelectorAll(".Q");
+
+            questions.forEach((qElement, index) => {
+              const qTitle = qElement.querySelector(".Q-title p").textContent;
+              if (qTitle === questionText) {
+                const answer = qElement.querySelector(".answer-container");
+                const icon = qElement.querySelector(".sort-icon");
+
+                // Закрываем все другие вопросы
+                document.querySelectorAll(".Q").forEach((otherQ) => {
+                  if (otherQ !== qElement) {
+                    const otherAnswer =
+                      otherQ.querySelector(".answer-container");
+                    const otherIcon = otherQ.querySelector(".sort-icon");
+                    otherAnswer.style.display = "none";
+                    otherQ.classList.remove("expanded");
+                    otherQ.style.height = "42px";
+                    otherIcon.style.transform = "rotate(0deg)";
+                  }
+                });
+
+                // Открываем нужный вопрос
+                answer.style.display = "block";
+                qElement.classList.add("expanded");
+                icon.style.transform = "rotate(180deg)";
+
+                // Прокручиваем к вопросу
+                setTimeout(() => {
+                  qElement.classList.remove("highlighted");
+                }, 2000);
+
+                qElement.scrollIntoView({
+                  behavior: "smooth",
+                  block: "nearest",
+                });
+              }
+            });
+          });
+        });
+
+        // Обработчики для основных кнопок
+        function setupButton(buttonId, pageUrl) {
+          const btn = document.getElementById(buttonId);
+          if (btn) {
+            btn.addEventListener("click", function () {
+              this.classList.add("clicked");
+              setTimeout(() => {
+                window.location.href = pageUrl;
+              }, 300);
+            });
+          }
+        }
+
+        // Настройка кнопок
+        setupButton("profileBtn", "Личный кабинет - Мои курсы.html");
+        setupButton("shareBtn", "Личный кабинет - Мои курсы.html");
+        setupButton("headerCoursesBtn", "Все курсы.html");
+        setupButton("logoLink", "index.html");
+        setupButton("studentsLink", "index.html#works");
+        setupButton("structureLink", "index.html#structure");
+        setupButton("propsLink", "index.html#directions");
+        setupButton("weaponLink", "index.html#directions");
+        setupButton("youtube", "https://www.youtube.com/@Afentev");
+        setupButton("VK", "https://vk.com/id488882472");
+        setupButton("artstation", "https://www.artstation.com/afentev");
+        setupButton("discord", "https://discord.gg/mV3UcUJd");
+
+        // Проверяем hash URL при загрузке страницы
+        if (window.location.hash) {
+          const questionId = window.location.hash.substring(1);
+          const questionElement = document.getElementById(questionId);
+          if (questionElement) {
+            const answer = questionElement.querySelector(".answer-container");
+            const icon = questionElement.querySelector(".sort-icon");
+            toggleAnswer(questionElement, answer, icon);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
